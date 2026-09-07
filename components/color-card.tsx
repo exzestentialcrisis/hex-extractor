@@ -53,7 +53,11 @@ export function ColorCard({ color }: ColorCardProps) {
       <span
         className="relative flex min-h-48 flex-1 items-end p-5"
         style={{ backgroundColor: color.hex }}
-      />
+      >
+        <span className="absolute left-4 top-4 rounded-full border border-white/15 bg-black/45 px-2.5 py-1 text-xs font-medium text-white shadow-sm backdrop-blur-sm">
+          {statusText}
+        </span>
+      </span>
       <span className="flex items-center justify-between gap-4 border-t border-white/5 px-5 py-4">
         <span className="min-w-0">
           <span className="block truncate text-sm font-medium text-zinc-100">
@@ -62,9 +66,6 @@ export function ColorCard({ color }: ColorCardProps) {
           <span className="mt-1 block font-mono text-sm tracking-wide text-zinc-500">
             {color.hex}
           </span>
-        </span>
-        <span className="shrink-0 rounded-full border border-zinc-800 bg-zinc-900/70 px-2.5 py-1 text-xs font-medium text-zinc-500 transition-colors group-hover:border-pink-500/30 group-hover:text-pink-300">
-          {statusText}
         </span>
       </span>
     </button>

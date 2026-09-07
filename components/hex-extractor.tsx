@@ -12,7 +12,7 @@ export function HexExtractor() {
   const colors = useMemo(() => extractColors(text), [text]);
 
   return (
-    <main className="mx-auto w-full max-w-5xl px-5 py-12 sm:px-8 sm:py-20">
+    <main className="mx-auto w-full max-w-[1600px] px-5 py-12 sm:px-8 sm:py-20">
       <header className="max-w-2xl">
         <p className="mb-5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-pink-400">
           <span className="h-1.5 w-1.5 rounded-full bg-pink-400 shadow-[0_0_12px_rgb(244_114_182_/_0.8)]" />
@@ -66,7 +66,7 @@ export function HexExtractor() {
         </div>
 
         {colors.length > 0 ? (
-          <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
             {colors.map((color) => (
               <ColorCard key={color.hex} color={color} />
             ))}
